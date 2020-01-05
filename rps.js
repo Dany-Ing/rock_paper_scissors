@@ -1,3 +1,4 @@
+//Set Scores
 let playerScore = 0;
 let computerScore = 0;
 
@@ -8,6 +9,9 @@ const score_div = document.querySelector(".score");
 const results_div = document.querySelector(".results > p");
 const finalResults_div = document.querySelector(".final-results > h1");
 
+const rock_div = document.getElementById("Rock");
+const paper_div = document.getElementById("Paper");
+const scissors_div = document.getElementById("Scissors");
 //Computer's Choice 
 function computerPlay(){
     var myArray = ['Rock' , 'Paper' , 'Scissors'];
@@ -15,14 +19,24 @@ function computerPlay(){
     return rand;
 }
 
-const buttons = document.querySelectorAll('button');
-    buttons.forEach((button)=> {
-        button.addEventListener('click', (e) => {
-            const computerSelection = computerPlay()
-            playRound((button.id), computerSelection);
-        });
-    }); 
-      
+//Player's choice
+function main(){
+    rock_div.addEventListener('click', function(){
+        const computerSelection = computerPlay()
+        playRound('Rock', computerSelection)
+    })
+
+    paper_div.addEventListener('click', function(){
+        const computerSelection = computerPlay()
+        playRound('Paper', computerSelection)
+    })
+
+    scissors_div.addEventListener('click', function(){
+        const computerSelection = computerPlay()
+        playRound('Scissors', computerSelection)
+    })
+}
+
 function lose(player, computer){
     computerScore++;
     computer_score.innerHTML = computerScore;
@@ -43,9 +57,9 @@ function draw(){
 
 function results(){
     if(playerScore>computerScore){
-        finalResults_div.innerHTML = "Player Wins Game! :)"
+        finalResults_div.innerHTML = "Player Wins Game!"
     } else {
-        finalResults_div.innerHTML = "Computer Wins Game :("
+        finalResults_div.innerHTML = "Computer Wins Game."
     }
 }
 
@@ -77,3 +91,5 @@ function playRound(playerSelection, computerSelection){
         results();
     }  
 }
+
+main();

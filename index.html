@@ -6,28 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-<div id= "btn">
-    <button id="Rock">Rock</button>
-    <button id="Paper">Paper</button>
-    <button id="Scissors">Scissors</button>
-</div>
-
-<div class="score">
-    <span id="player-score">0</span>:<span id="computer-score">0</span>
-</div>
+    <header>
+        <h1>ROCK. PAPER. SCISSORS.</h1>
+    </header>
 
 <div class = "results">
     <p>Make your move.</p>
 </div>
 
+<div id= "btn">
+    <div class ="choice" id="Rock">
+        <img src = "images/rock.png" alt = "Rock">
+    </div>
+
+    <div class ="choice" id="Paper">
+        <img src = "images/paper1.png" alt = "Paper">
+    </div>
+
+    <div class ="choice" id="Scissors">
+        <img src = "images/scissors1.png" alt = "Scissors">
+    </div>
+
+</div>
+
+<div class="score-header">
+    <h1>SCORE</h1>
+</div>
+
+<div class="score">
+    <div id="player-label" class="badge">Player</div>
+    <div id="computer-label" class="badge">Comp</div>
+    <span id="player-score">0</span> | <span id="computer-score">0</span>
+</div>
+
 <div class = "final-results">
     <h1></h1>
 </div>
-
 
     <script src="rps.js" charset="UTF-8"></script>
 </body>
