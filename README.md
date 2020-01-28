@@ -3,4 +3,4 @@ Open console on developer tools to play game.
 
 update #1: Added a simple UI which incorporates buttons for the user to select their choice in each round of rock paper scissors. Had some issues figuring out how to add the eventlistener to correspond with "playerSelection".
 
-https://dany-ing.github.io/rock_paper_scissors/
+Demo: https://dany-ing.github.io/rock_paper_scissors/
